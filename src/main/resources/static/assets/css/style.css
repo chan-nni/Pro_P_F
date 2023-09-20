@@ -2261,6 +2261,53 @@ section {
   color: #ffffff;
   font-size: 30px;
 }
+/**header 사용자, 스크랩 아이콘 CSS*/
+.user-button {
+  display: flex; /* 아이콘들을 수평으로 나란히 표시 */
+  align-items: center; /* 수직 중앙 정렬 */
+  gap: 5px; /* 아이콘들 사이의 간격 설정 */
+}
+
+/* 아이콘 스타일링 (아이콘 색상, 크기 등을 필요에 따라 조정) */
+.bi {
+  font-size: 30px; /* 아이콘 크기 조정 */
+  color: #ffffff; /* 아이콘 색상 설정 */
+}
+
+/*header 사용자 드롭다운 CSS*/
+/* 드롭다운 컨테이너를 상대적인 위치로 설정합니다. */
+.user-dropdown {
+  position: relative;
+}
+/* 드롭다운 컨테이너를 기본적으로 숨깁니다. */
+/* 드롭다운 컨테이너 내의 드롭다운 메뉴를 절대적인 위치로 설정하고 아이콘 오른쪽 및 아래에 나타나도록 조절합니다. */
+.user-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+  top: 35px; /* 아이콘 아래에서 약간 아래로 이동합니다. */
+  left: 35px; /* 아이콘의 오른쪽에 나타나도록 설정합니다. */
+}
+/* 아이콘 클릭 시 드롭다운 메뉴를 보이도록 설정합니다. */
+#dropdown-toggle:focus + .user-dropdown-content {
+  display: block;
+}
+
+/* 드롭다운 메뉴 아이템 스타일링 */
+.user-dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: #333;
+}
+
+.user-dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/******************************************************/
 .like-post{
   display: block;
   margin-left: auto;

@@ -233,4 +233,12 @@
    */
   new PureCounter();
 
+  /**
+   * header 사용자 드롭다운 JS
+   */
+  document.getElementById("dropdown-toggle").addEventListener("click", function () {
+    var dropdownContent = document.querySelector(".user-dropdown-content");
+    dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
+  });
+
 })()
